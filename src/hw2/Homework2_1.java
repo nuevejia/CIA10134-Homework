@@ -1,35 +1,46 @@
 package hw2;
 
-public class Homework2_1 {
+public class homework2_1 {
 	public static void main(String[] args) {
-		// 請設計一隻Java程式,計算1~1000的偶數和 (2+4+6+8+...+1000)
-		int sum = 0;
-		for (int i = 2; i <= 1000; i += 2)
-			sum += i;
-		System.out.println(sum);
+		// for+while迴圈，輸出九九乘法表
 
-		// 請設計一隻Java程式,計算1~10的連乘積 (1*2*3*...*10) (用for迴圈)
-		int sum1 = 1;
-		for (int a = 1; a <= 10; a++)
-			sum1 *= a;
-		System.out.println(sum1);
+		for (int i = 1; i <= 9; i++) {
+			int j = 1;
+			while (j <= 9) {
+				System.out.print(i + "*" + j + "=" + i * j + "\t");
+				j++;
+			}
+			System.out.println();
 
-		// 請設計一隻Java程式,計算1~10的連乘積 (1*2*3*...*10) (用while迴圈)
-		int sum2 = 1;
-		int b = 1;
-		while (b <= 10) {
-			sum2 *= b;
-			b++;
-			System.out.println(sum2);
 		}
 
-		/*
-		 * 請設計一隻Java程式,輸出結果為以下: 1 4 9 16 25 36 49 64 81 100
-		 */
+		System.out.println("========================================================");
+		
+		// for+do while迴圈，輸出九九乘法表
+		for (int a = 1; a <= 9; a++) {
+			int b = 1;
+			do {
+				System.out.print(a + "*" + b + "=" + a * b + "\t");
+				b++;
+			} while (b <= 9);
+			System.out.println();
 
-		for (int c = 1; c <= 10; c++)
-			System.out.println(c * c);
+		}
+		
+		System.out.println("========================================================");
+		
+		// while+do while迴圈，輸出九九乘法表
+		int c = 1;
+		while (c <= 9) {
+			int d = 1;
+			do {
+				System.out.print(c + "*" + d + "=" + c * d + "\t");
+				d++;
 
+			} while (d <= 9);
+			c++;
+			System.out.println();
+		}
 	}
 
 }
